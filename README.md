@@ -5,6 +5,7 @@ A quick experiment using Oracle Nashorn and Gradle as dependencies provider.
 ## Requirement 
 
 * Java 1.8+
+* Gradle
 
 ## Getting Started
 
@@ -13,7 +14,7 @@ To download and get the dependencies
 ```bash
 git clone https://github.com/psanders/yweatherjs.git
 cd yweatherjs
-gradlew getDeps
+gradle getDeps
 ```
 
 ## Run the app
