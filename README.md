@@ -18,7 +18,7 @@ cd yweatherjs
 gradle getDeps
 ```
 
-## Run the app
+## Run the App
 
 Just run the `./app.js` with any yql as parameter. For example
 
