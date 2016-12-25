@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+dependencies {
+    runtime group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+    runtime group: 'commons-httpclient', name: 'commons-httpclient', version: '3.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+task getDeps(type: Copy) {
+    from sourceSets.main.runtimeClasspath
+    into 'lib/'
+}
