@@ -1,4 +1,4 @@
-# Yahoo Weather JS
+# Yahoo! Weather JS
 
 An experiment using Oracle Nashorn and Gradle as dependencies provider as well as Yahoo's Weather Service
 and YQL(Yahoo! Query Language) to obtain the weather information.
