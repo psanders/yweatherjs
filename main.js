@@ -1,8 +1,18 @@
-var baseUrl = "http://query.yahooapis.com/v1/public/yql";
-var yqlQueryUrl = baseUrl + "?q=" + encodeURI(yqlQuery) + "&format=json";
-var httpClient = new HttpClient();
-var getMethod = new GetMethod(yqlQueryUrl);
+var HttpClient = Java.type('org.apache.commons.httpclient.HttpClient')
+var GetMethod = Java.type('org.apache.commons.httpclient.methods.GetMethod')
 
-httpClient.executeMethod(getMethod);
+if(arguments.length < 1) {
+    print("Use: You must provide a yql query.\nExample ./app 'select * from weather.forecast where location=90210'")
+    exit()
+} else {
+    var yqlQuery = arguments[0]
+}
 
-print("" + getMethod.getResponseBodyAsString())
+let baseUrl = "http://query.yahooapis.com/v1/public/yql"
+let yqlQueryUrl = baseUrl + "?q=" + encodeURI(yqlQuery) + "&format=json"
+let httpClient = new HttpClient()
+let getMethod = new GetMethod(yqlQueryUrl)
+
+httpClient.executeMethod(getMethod)
+
+print(getMethod.getResponseBodyAsString())
