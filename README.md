@@ -23,7 +23,7 @@ gradle getDeps
 Just run the `./app` with any yql as parameter. For example
 
 ```bash
-./app.js 'select * from weather.forecast where location=90210'
+./app 'select * from weather.forecast where location=90210'
 ```
 
 For more yql examples go to https://developer.yahoo.com/weather/
