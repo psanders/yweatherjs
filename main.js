@@ -1,5 +1,5 @@
-var HttpClient = Java.type('org.apache.commons.httpclient.HttpClient')
-var GetMethod = Java.type('org.apache.commons.httpclient.methods.GetMethod')
+var HttpClient = org.apache.commons.httpclient.HttpClient
+var GetMethod = org.apache.commons.httpclient.methods.GetMethod
 
 if(arguments.length < 1) {
     print("Use: You must provide a yql query.\nExample ./app 'select * from weather.forecast where location=90210'")
